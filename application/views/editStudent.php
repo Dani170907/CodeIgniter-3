@@ -8,8 +8,7 @@
 <body>
     
     <h1>Edit Data</h1>
-
-        
+  
     <div>
     <form action="/action_page.php">
         <label for="fname">First Name</label>
@@ -29,6 +28,5 @@
     </form>
     </div>
 
-    <a href="">Save Data</a>
 </body>
 </html>
