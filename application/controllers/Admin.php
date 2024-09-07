@@ -8,9 +8,9 @@ class Admin extends CI_Controller {
 		$this->load->model('StudentsModel');
 		$data['tb_students'] = $this->StudentsModel->getStudents();
 
-		$this->load->view('template/headerAdmin');
+		$this->load->view('templates/headerAdmin');
 		$this->load->view('admin', $data);
-		$this->load->view('template/footerAdmin');
+		$this->load->view('templates/footerAdmin');
 	}
 
 	public function delete($id) 

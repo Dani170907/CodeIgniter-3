@@ -5,6 +5,7 @@ class EditStudent extends CI_Controller {
     
 	public function index()
 	{
+		$this->load->view('templates/headerInput');
 		$this->load->view('editStudent');
 	}
 
