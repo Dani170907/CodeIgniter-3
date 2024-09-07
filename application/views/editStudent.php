@@ -15,9 +15,10 @@
         <input type="text" id="nama" name="nama" placeholder="">
 
         <label for="alamat">Address</label>
-        <input type="text" id="address" name="address" placeholder="">
+        <input type="text" id="alamat" name="alamat" placeholder="">
 
-    
+        <label for="tanggal_lahir">Tanggal Lahir</label>
+        <input type="text" name="alamat" id="alamat" required>
 
         <label for="country">Country</label>
         <select id="country" name="country">
@@ -26,7 +27,7 @@
         <option value="usa">USA</option>
         </select>
     
-        <input type="submit" value="Submit">
+        <button type="submit" value="Submit">
     </form>
     </div>
 
