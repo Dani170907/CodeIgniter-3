@@ -9,7 +9,7 @@
     
     <h1>Edit Data</h1>
 
-    <table class="customers">
+    <table border="1px">
         <tr>
             <th>No.</th>
             <th>Name</th>

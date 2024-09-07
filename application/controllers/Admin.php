@@ -13,7 +13,7 @@ class Admin extends CI_Controller {
 		$this->load->view('template/footerAdmin');
 	}
 
-	public function hapus() 
+	public function delete($id) 
 	{
         $this->db->delete('tb_students', ['id' => $id]);
 		redirect('Admin');

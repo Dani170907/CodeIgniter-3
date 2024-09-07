@@ -31,7 +31,7 @@
             <td><?= $student['tanggal_lahir'] ?></td>
             <td>
                 <a href="<?= base_url();?>Admin/edit/<?= $student['id']; ?>">Edit</a> | 
-                <a href="<?= base_url();?>Admin/hapus/<?= $student['id']; ?>">Delete</a>
+                <a href="<?= base_url();?>Admin/delete/<?= $student['id']; ?>">Delete</a>
             </td>
         </tr>
         <?php endforeach; ?>
