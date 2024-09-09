@@ -22,4 +22,5 @@ class StudentsModel extends CI_Model {
     public function getStudentsById($id) {
         return $this->db->get_where('tb_students', ['id' => $id])-row_array();
     }
+    // select * from tb_students where id = ''
 }
