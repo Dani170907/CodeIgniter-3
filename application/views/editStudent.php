@@ -10,24 +10,27 @@
     <h1>Edit Data</h1>
   
     <div>
-    <form action="/action_page.php">
+    <form action="<?php echo base_url() ?>Admin/update">
+        <input type="hidden" name="id">
+
         <label for="nama">Name</label>
-        <input type="text" id="nama" name="nama" placeholder="">
+        <input type="text" id="nama" name="nama" value="<?= $edit ['nama']; ?>"><br>
 
         <label for="alamat">Address</label>
-        <input type="text" id="alamat" name="alamat" placeholder="">
+        <input type="text" id="alamat" name="alamat" value="<?= $edit ['alamat'] ?>"><br>
 
         <label for="tanggal_lahir">Tanggal Lahir</label>
-        <input type="text" name="alamat" id="alamat" required>
+        <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="<?= $edit ['tanggal_lahir'] ?>" required><br>
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-        <option value="australia">Australia</option>
-        <option value="canada">Canada</option>
-        <option value="usa">USA</option>
+        <label for="status">Status</label>
+        <select id="status" name="status">
+        <option value="<?= $edit ['status'] ?>"><?= $edit ['status'] ?></option>
+        <option value="Active">Active</option>
+        <option value="Siswa Keluar">Siswa Keluar</option>
+        <option value="Siswa Bermasalah">Siswa Bermasalah</option>
         </select>
     
-        <button type="submit" value="Submit">
+        <button type="submit">Edit</button>
     </form>
     </div>
 
