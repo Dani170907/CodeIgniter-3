@@ -18,4 +18,8 @@ class StudentsModel extends CI_Model {
         ];
         $this->db->insert('tb_students', $data);
     }
+
+    public function getStudentsById($id) {
+        return $this->db->get_where('tb_students', ['id' => $id])-row_array();
+    }
 }

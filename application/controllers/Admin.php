@@ -10,7 +10,7 @@ class Admin extends CI_Controller {
 
 		$this->load->view('templates/headerAdmin');
 		$this->load->view('admin', $data);
-		$this->load->view('templates/footerAdmin');
+		$this->load->view('templates/footer');
 	}
 
 	public function delete($id) 
@@ -25,6 +25,6 @@ class Admin extends CI_Controller {
 
 		$this->load->view('templates/headerAdmin');
 		$this->load->view('editStudent');
-		$this->load->view('templates/footerAdmin');
+		$this->load->view('templates/footer');
 	}
 }
