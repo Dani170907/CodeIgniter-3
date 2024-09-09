@@ -18,4 +18,13 @@ class Admin extends CI_Controller {
         $this->db->delete('tb_students', ['id' => $id]);
 		redirect('Admin');
     }
+
+	public function edit($id) {
+		$this->load->model('StudentsModel');
+		$data['edit'] = $this->StudentsModel->getStudentsById($id);
+
+		$this->load->view('templates/headerAdmin');
+		$this->load->view('editStudent');
+		$this->load->view('templates/footerAdmin');
+	}
 }
