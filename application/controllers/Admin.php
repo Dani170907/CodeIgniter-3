@@ -9,6 +9,7 @@ class Admin extends CI_Controller {
 		$data['tb_students'] = $this->StudentsModel->getStudents();
 
 		$this->load->view('templates/headerAdmin');
+		$this->load->view('templates/navbar');
 		$this->load->view('admin', $data);
 		$this->load->view('templates/footer');
 	}
