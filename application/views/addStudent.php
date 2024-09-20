@@ -14,8 +14,14 @@
         <input type="nis" name="nis" id="nis" required><br>
         <label for="nama">Nama Siswa</label>
         <input type="text" name="nama" id="nama" required><br>
-        <label for="alamat">Alamat</label>
-        <input type="text" name="alamat" id="alamat" required><br>
+        <select name="alamat" id="">
+            <option value="">Alamat</option>
+            <option value="pekalongan">pekalongan</option>
+            <option value="pemalang">pemalang</option>
+            <option value="batang">batang</option>
+            <option value="tegal">tegal</option>
+            <option value="karawang">karawang</option>
+        </select>
         <label for="tanggal_lahir">Tanggal Lahir</label>
         <input type="date" name="tanggal_lahir" id="tanggal_lahir" required><br>
         <button type="submit">Add</button>
