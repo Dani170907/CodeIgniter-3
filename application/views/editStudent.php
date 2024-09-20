@@ -18,14 +18,14 @@
 
         <select name="alamat" id="">
             <option value="alamat">Pilih Alamat</option>
-            <option value="Pekalongan">Pekalongan</option>
-            <option value="Pemalang">Pemalang</option>
-            <option value="Batang">Batang</option>
-            <option value="Tegal">Tegal</option>
-            <option value="Karawang">Karawang</option>
+            <?php foreach( $alamat as $al ) : ?>
+                <?php if( $al == $edit ) : ?>
+                    <option value="<?= $al; ?>" selected><?= $al; ?></option>
+                <?php else :?>
+                    <option value="<?= $al; ?>"><?= $al; ?></option>
+                <?php endif; ?>
+            <?php endforeach; ?>
         </select>
-        <label for="alamat">Address</label>
-        <input type="text" id="alamat" name="alamat" value="<?= $edit['alamat']; ?>"><br>
 
         <label for="tanggal_lahir">Tanggal Lahir</label>
         <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="<?= $edit['tanggal_lahir'] ?>" required><br>
