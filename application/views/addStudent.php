@@ -11,7 +11,7 @@
     <form action="AddStudent/add" method="get">
 
         <label for="nis">NIS</label>
-        <input type="nis" name="nis" id="nis" required><br>
+        <input type="text" name="nis" id="nis" required><br>
         <label for="nama">Nama Siswa</label>
         <input type="text" name="nama" id="nama" required><br>
         <select name="alamat" id="">
