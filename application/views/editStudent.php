@@ -16,6 +16,14 @@
         <label for="nama">Name</label>
         <input type="text" id="nama" name="nama" value="<?= $edit['nama']; ?>"><br>
 
+        <select name="alamat" id="">
+            <option value="alamat">Pilih Alamat</option>
+            <option value="Pekalongan">Pekalongan</option>
+            <option value="Pemalang">Pemalang</option>
+            <option value="Batang">Batang</option>
+            <option value="Tegal">Tegal</option>
+            <option value="Karawang">Karawang</option>
+        </select>
         <label for="alamat">Address</label>
         <input type="text" id="alamat" name="alamat" value="<?= $edit['alamat']; ?>"><br>
 

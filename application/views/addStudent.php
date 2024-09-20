@@ -15,7 +15,7 @@
         <label for="nama">Nama Siswa</label>
         <input type="text" name="nama" id="nama" required><br>
         <select name="alamat" id="">
-            <option value="">Alamat</option>
+            <option value="" disabled selected>Pilih Alamat</option>
             <option value="pekalongan">pekalongan</option>
             <option value="pemalang">pemalang</option>
             <option value="batang">batang</option>
