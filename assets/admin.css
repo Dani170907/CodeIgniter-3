@@ -27,8 +27,13 @@ h1 {
 a {
   font-family: sans-serif;
   text-decoration: none;
-  background-color: #04AA6D;
-  color: white;
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+  font-weight: bold;
   padding: 5px;
   font-size: bold;
+}
+a:hover {
+  background-color: gold;
 }

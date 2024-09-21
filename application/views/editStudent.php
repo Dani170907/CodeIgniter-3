@@ -9,7 +9,6 @@
     
     <h1>Edit Data</h1>
   
-    <div>
     <form action="<?php echo base_url() ?>Admin/update" method="get">
         <input type="hidden" name="id" value="<?= $edit['id']; ?>">
 
@@ -18,7 +17,7 @@
 
         <label for="alamat">Alamat</label>
         <select name="alamat" id="alamat">
-            <option value="alamat">-- Pilih Alamat --</option>
+            <option value="alamat" disabled selected>-- Pilih Alamat --</option>
             <?php foreach( $alamat as $al ) : ?>
                 <?php if( $al == $edit['alamat'] ) : ?>
                     <option value="<?= $al; ?>" selected><?= $al; ?></option>
@@ -33,15 +32,14 @@
 
         <label for="status">Status</label>
         <select id="status" name="status">
-        <option value="<?= $edit['status'] ?>"><?= $edit['status'] ?></option>
-        <option value="Active">Active</option>
-        <option value="Siswa Keluar">Siswa Keluar</option>
-        <option value="Siswa Bermasalah">Siswa Bermasalah</option>
+            <option value="<?= $edit['status'] ?>"><?= $edit['status'] ?></option>
+            <option value="Active">Active</option>
+            <option value="Siswa Keluar">Siswa Keluar</option>
+            <option value="Siswa Bermasalah">Siswa Bermasalah</option>
         </select>
     
         <button type="submit">Edit</button>
     </form>
-    </div>
 
 </body>
 </html>

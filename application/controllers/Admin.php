@@ -25,7 +25,7 @@ class Admin extends CI_Controller {
 		$data['edit'] = $this->StudentsModel->getStudentsById($id);
 		$data['alamat'] = ['Pekalongan', 'Pemalang', 'Batang', 'Tegal', 'Karawang'];
 
-		$this->load->view('templates/headerAdmin');
+		$this->load->view('templates/headerInput');
 		$this->load->view('editStudent', $data);
 		$this->load->view('templates/footer');
 	}

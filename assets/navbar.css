@@ -3,9 +3,12 @@
     padding: 20px;
 }
 .navbar a {
-    color: black;
+    color: #0f0f0f;
     background-color: yellow;
     text-decoration: none;
     border-radius: 3px;
     font-weight: 600;
+}
+.navbar a:hover {
+    background-color: gold;
 }

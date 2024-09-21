@@ -8,7 +8,7 @@
 <body>
 
     <h1>Students Data</h1>
-    
+
     <a href="<?php echo base_url('AddStudent'); ?>">Add Data</a>
 
 
@@ -22,9 +22,10 @@
             <th>Date Of Birth</th>
             <th>Action</th>
         </tr>
+        <?php $no = 1 ?>
         <?php foreach ($tb_students as $student) : ?>
         <tr>
-            <td><?= $student['id'] ?></td>
+            <td><?= $no++ ?></td>
             <td><?= $student['nama'] ?></td>
             <td><?= $student['nis'] ?></td>
             <td><?= $student['status'] ?></td>
@@ -32,7 +33,7 @@
             <td><?= $student['tanggal_lahir'] ?></td>
             <td>
                 <a href="<?= base_url();?>Admin/edit/<?= $student['id']; ?>">Edit</a> | 
-                <a onclick="return confirm('Bener Mau Hapus nii?')" href="<?= base_url();?>Admin/delete/<?= $student['id']; ?>">Delete</a>
+                <a onclick="return confirm('Bener mau di Hapus nii?')" href="<?= base_url();?>Admin/delete/<?= $student['id']; ?>">Delete</a>
             </td>
         </tr>
         <?php endforeach; ?>
