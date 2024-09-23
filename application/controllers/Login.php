@@ -15,6 +15,17 @@ class Login extends CI_Controller {
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 
-		$user = $this->db->get_where('user', ['username' => $username])->row_array();
+		$user = $this->db->get_where('users', ['username' => $username])->row_array();
+	}
+
+	if ($user) {
+		if ($password == $user['password']) {
+			$data = [
+				'username' => $user['username']
+			];
+		    $this->session->set_userdata($data);
+			redirect('Admin');
+	} else {
+		$this->session->set_flashdata('massage', '<h2>Password is incorrect</h2>');
 	}
 }
