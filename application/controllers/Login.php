@@ -30,4 +30,10 @@ class Login extends CI_Controller {
 		}
 	}
 	}
+	
+	public function logout() {
+        $this->session->unset_userdata('username');
+		$this->session->set_flashdata('massage', '<h1>Berhasil Logout</h1>');
+        redirect('Login');
+    }
 }
