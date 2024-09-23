@@ -27,5 +27,6 @@ class Login extends CI_Controller {
 			redirect('Admin');
 	} else {
 		$this->session->set_flashdata('massage', '<h2>Password is incorrect</h2>');
+		redirect('Login');
 	}
 }
