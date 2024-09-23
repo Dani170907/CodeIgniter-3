@@ -10,4 +10,11 @@ class Login extends CI_Controller {
 		$this->load->view('templates/footer');
 
 	}
+
+	public function authenticate() {
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+
+		$user = $this->db->get_where('user', ['username' => $username])->row_array();
+	}
 }

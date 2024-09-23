@@ -1,6 +1,6 @@
 <h1>Log In Page</h1>
 
-<form action="<?= base_url() ?>Login/verification" method="post">
+<form action="<?= base_url() ?>Login/authenticate" method="post">
     <label for="username">UserName</label>
     <input type="text" name="username" placeholder="Masukkan UserName">
     <br><br>
