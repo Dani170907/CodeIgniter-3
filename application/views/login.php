@@ -9,3 +9,4 @@
     <input type="password" name="password" id="" placeholder="Masukkan Password"><br><br>
     <button type="submit">Log In</button>
 </form>
+<p>Don't have account?<a href="<?= base_url(); ?>Registration">Daftar</a></p>

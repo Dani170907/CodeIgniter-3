@@ -8,7 +8,7 @@ class StudentsModel extends CI_Model {
         // Mengambil semua data dari tabel tb_students dan membuatnya menjadi array
         return $this->db->get('tb_students')->result_array();
     }
-    public function addStudents() {
+    public function addStudent() {
         $data = 
         [
             "nis" => $this->input->get('nis', true),
