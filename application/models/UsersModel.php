@@ -7,7 +7,7 @@ class UsersModel extends CI_Model {
         $data = 
         [
             "username" => $this->input->post('username', true),
-            "password" => $passwordHash($this->input->post('password'), PASSWORD_DEFAULT),
+            "password" => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
             "email" => $this->input->post('email', true)
         ];
 
