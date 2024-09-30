@@ -6,6 +6,9 @@ class StudentsModel extends CI_Model {
     public function getStudents()
     {
         // Mengambil semua data dari tabel tb_students dan membuatnya menjadi array
+        $this->db->select('');
+        $this->db->from('tb_students');
+        $this->db->join('alamat', 'alamat.id = tb_students.id_alamat');
         return $this->db->get('tb_students')->result_array();
     }
     public function addStudent() {
