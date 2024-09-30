@@ -29,7 +29,7 @@ class Admin extends CI_Controller {
 	public function edit($id) {
 		$this->load->model('StudentsModel');
 		$data['edit'] = $this->StudentsModel->getStudentsById($id);
-		$data['alamat'] = ['Pekalongan', 'Pemalang', 'Batang', 'Tegal', 'Karawang'];
+		$data['alamat'] = $this->db->get('alamat')->result_array();
 
 		$this->load->view('templates/headerInput');
 		$this->load->view('editStudent', $data);
@@ -38,15 +38,16 @@ class Admin extends CI_Controller {
 
 	public function update() {
 		$data = [
-			'nama' => $this->input->get('nama'),
-			'status' => $this->input->get('status'),
-			'alamat' => $this->input->get('alamat'),
-			'tanggal_lahir' => $this->input->get('tanggal_lahir')
+			'nama' => $this->input->post('nama'),
+			'status' => $this->input->post('status'),
+			'alamat' => $this->input->post('alamat'),
+			'tanggal_lahir' => $this->input->post('tanggal_lahir')
 		];
 	
-		$this->db->where('id', $this->input->get('id'));
+		$this->db->where('id', $this->input->post('id'));
 		$this->db->update('tb_students', $data);
 		redirect('Admin');
 	}
+	
 	
 }

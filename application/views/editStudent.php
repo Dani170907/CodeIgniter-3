@@ -9,7 +9,7 @@
     
     <h1>Edit Data</h1>
   
-    <form action="<?php echo base_url() ?>Admin/update" method="get">
+    <form action="<?php echo base_url() ?>Admin/update" method="post">
         <input type="hidden" name="id" value="<?= $edit['id']; ?>">
 
         <label for="nama">Name</label>

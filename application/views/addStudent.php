@@ -19,11 +19,9 @@
         
         <select name="alamat" id="">
             <option value="" disabled selected>Pilih Alamat</option>
-            <option value="Pekalongan">Pekalongan</option>
-            <option value="Pemalang">Pemalang</option>
-            <option value="Batang">Batang</option>
-            <option value="Tegal">Tegal</option>
-            <option value="Karawang">Karawang</option>
+            <?php foreach($alamat as $al) : ?>
+                <option value="<?= $al['id'] ?>"><?= $al['alamat'] ?></option>
+            <?php endforeach; ?>
         </select>
         <label for="tanggal_lahir">Tanggal Lahir</label>
         <input type="date" name="tanggal_lahir" id="tanggal_lahir" required><br>
