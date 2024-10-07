@@ -25,5 +25,10 @@
         public function getStudentsById($id) {
             return $this->db->get_where('tb_students', ['id' => $id])->row_array();
         }
-        // select * from tb_students where id = ''
+
+        public function deleteStudentById($id) {
+            $this->db->where('tb_students', ['id' => $id]);
+            $this->db->delete('tb_students');
+        }
+
     }

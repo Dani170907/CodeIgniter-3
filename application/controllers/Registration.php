@@ -13,7 +13,7 @@ class Registration extends CI_Controller {
         $this->load->model('UsersModel');
 		$data['users'] = $this->UsersModel->addUser();
 
-        $this->session->set_flashdata('massage', '<h2>User Berhasil Ditambahkan</h2>');
+        $this->session->set_flashdata('message', '<h1>User berhasil ditambahkan</h1>');
 		redirect('Login');
     }
 }

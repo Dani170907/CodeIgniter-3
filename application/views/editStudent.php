@@ -16,16 +16,16 @@
         <input type="text" id="nama" name="nama" value="<?= $edit['nama']; ?>"><br>
 
         <label for="alamat">Alamat</label>
-        <select name="alamat" id="alamat">
-            <option value="alamat" disabled selected>-- Pilih Alamat --</option>
-            <?php foreach( $alamat as $al ) : ?>
-                <?php if( $al == $edit['alamat'] ) : ?>
-                    <option value="<?= $al; ?>" selected><?= $al; ?></option>
-                <?php else :?>
-                    <option value="<?= $al; ?>"><?= $al; ?></option>
+        <select name="alamat">
+            <option value=""> --pilih alamat-- </option>
+                <?php foreach( $alamat as $al ) : ?>
+            <?php if( $al == $edit['alamat'] ) : ?>
+                <option value="<?= $al; ?>" selected><?= $al; ?></option>
+            <?php else : ?>
+                <option value="<?= $al; ?>"><?= $al; ?></option>
                 <?php endif; ?>
             <?php endforeach; ?>
-        </select><br>
+        </select>
 
         <label for="tanggal_lahir">Tanggal Lahir</label>
         <input type="date" name="tanggal_lahir" id="tanggal_lahir" value="<?= $edit['tanggal_lahir'] ?>" required><br>
