@@ -18,13 +18,9 @@
         <label for="alamat">Alamat</label>
         <select name="alamat">
             <option value=""> --pilih alamat-- </option>
-                <?php foreach( $alamat as $al ) : ?>
-            <?php if( $al == $edit['alamat'] ) : ?>
-                <option value="<?= $al; ?>" selected><?= $al; ?></option>
-            <?php else : ?>
-                <option value="<?= $al; ?>"><?= $al; ?></option>
-                <?php endif; ?>
-            <?php endforeach; ?>
+            <?php foreach ($alamat as $al ): ?>
+                <option value="<?= $al['id'] ?>"><?= $al['id'] ?></option>
+            <?php endforeach;?>
         </select>
 
         <label for="tanggal_lahir">Tanggal Lahir</label>

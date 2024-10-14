@@ -10,6 +10,7 @@
     <h1>Students Data</h1>
 
     <a href="<?php echo base_url('AddStudent'); ?>">Add Data</a>
+    <a href="<?php echo base_url('Address'); ?>">Data Alamat</a>
 
 
     <table class="customers">
