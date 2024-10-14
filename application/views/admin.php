@@ -31,7 +31,7 @@
             <td><?= $student['nis'] ?></td>
             <td><?= $student['status'] ?></td>
             <td><?= $student['alamat'] ?></td>
-            <td><?= $student['tanggal_lahir'] ?></td>
+            <td><?= format_indo(date($student['tanggal_lahir'])) ?></td>
             <td>
                 <a href="<?= base_url();?>Admin/edit/<?= $student['id']; ?>">Edit</a> | 
                 <a onclick="return confirm('Bener mau di Hapus nii?')" href="<?= base_url();?>Admin/delete/<?= $student['id']; ?>">Delete</a>
